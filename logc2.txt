@@ -1,0 +1,3 @@
+strace: Process 2305089 attached
+pselect6(21, [20], NULL, NULL, NULL, NULL <unfinished ...>) = ?
++++ exited with 120 +++

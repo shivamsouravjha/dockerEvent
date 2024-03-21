@@ -1,0 +1,85 @@
+strace: Process 2303658 attached
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999999250})
+recvfrom(15, "\1\0\0\0\0\0\1\366", 8, 0, NULL, NULL) = 8
+futex(0xa36768, FUTEX_WAKE_PRIVATE, 1)  = 1
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+futex(0xa3676c, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=225895538}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=227781705}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 1
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999998709})
+recvfrom(15, "{\"t\":{\"$date\":\"2024-03-21T08:41:"..., 502, 0, NULL, NULL) = 502
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=231417290}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=234377291}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0x39e8ef70, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 1
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 1
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999999375})
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=235865375}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+recvfrom(15, "\1\0\0\0\0\0\0\314", 8, 0, NULL, NULL) = 8
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+futex(0xa3676c, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=236084750}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 1
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999998917})
+recvfrom(15, "{\"t\":{\"$date\":\"2024-03-21T08:41:"..., 204, 0, NULL, NULL) = 204
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=239055334}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36768, FUTEX_WAKE_PRIVATE, 1)  = 1
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+futex(0xa3676c, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=246468586}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=253594922}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 0
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999998583})
+recvfrom(15, "\1\0\0\0\0\0\2i", 8, 0, NULL, NULL) = 8
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=256771882}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999999167})
+recvfrom(15, "{\"t\":{\"$date\":\"2024-03-21T08:41:"..., 617, 0, NULL, NULL) = 617
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 1
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+futex(0xa36768, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=167869, tv_nsec=258729174}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0xa36770, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xa3676c, FUTEX_WAKE_PRIVATE, 1)  = 0
+ppoll([{fd=15, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 0) = 1 ([{fd=15, revents=POLLIN}], left {tv_sec=59, tv_nsec=999999375})
+recvfrom(15, "\1\0\0\0\0\0\0\234", 8, 0, NULL, NULL) = 8
+pselect6(16, [15], NULL, NULL, NULL, NULL) = 1 (in [15])
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 19
+newfstatat(19, "", {st_mode=S_IFREG|0644, st_size=55138, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 55138, PROT_READ, MAP_PRIVATE, 19, 0) = 0xffff8a692000
+close(19)                               = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 19
+read(19, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(19, "", {st_mode=S_IFREG|0644, st_size=133448, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 262856, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff85fff000
+mmap(0xffff86000000, 197320, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, 0) = 0xffff86000000
+munmap(0xffff85fff000, 4096)            = 0
+munmap(0xffff86031000, 58056)           = 0
+mprotect(0xffff86014000, 110592, PROT_NONE) = 0
+mmap(0xffff8602f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, 0x1f000) = 0xffff8602f000
+close(19)                               = 0
+mprotect(0xffff8602f000, 4096, PROT_READ) = 0
+munmap(0xffff8a692000, 55138)           = 0
+futex(0xffff86030234, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+madvise(0xffff87160000, 8314880, MADV_DONTNEED) = 0
+exit(0)                                 = ?
++++ exited with 0 +++

@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  node-apps:
+    image: express-mongoose_node-app
+    container_name: nodeMongoApps
+    ports:
+      - "8000:8000"
+    networks:
+      - keploy-network  
+  mongos:
+    image: mongo
+    container_name: mongoDbs
+    ports:
+      - 27017:27017
+    networks:
+      - keploy-network
+networks:
+  keploy-network:
+    external: true

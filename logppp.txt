@@ -1,0 +1,14 @@
+strace: Process 2304838 attached
+ppoll([{fd=-1}, {fd=12, events=POLLIN}, {fd=11, events=POLLIN}], 3, NULL, NULL, 8) = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=2304839, si_uid=0, si_status=SIGTERM, si_utime=0, si_stime=0} ---
+write(13, "\21", 1)                     = 1
+rt_sigreturn({mask=[]})                 = -1 EINTR (Interrupted system call)
+read(11, "\21", 1)                      = 1
+read(11, 0xffffce0dba07, 1)             = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(2304839, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGTERM}], WNOHANG|WSTOPPED, NULL) = 2304839
+ioctl(10, TIOCSPGRP, [2304838])         = 0
+sendto(12, "\2\0\0\0\17\0\0\0", 8, 0, NULL, 0) = 8
+exit_group(1)                           = ?
++++ exited with 1 +++

@@ -1,0 +1,4 @@
+strace: Process 2304839 attached
+wait4(-1, 0xfffff0034a1c, 0, NULL)      = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=2305919, si_uid=0} ---
++++ killed by SIGTERM +++
