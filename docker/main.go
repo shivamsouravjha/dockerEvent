@@ -7,7 +7,6 @@ import (
 	"os/exec"
 	"os/signal"
 	"path/filepath"
-	"sort"
 	"strconv"
 	"strings"
 	"syscall"
@@ -34,7 +33,7 @@ func main() {
 	// Set the cancel function for the command
 	cmd.Cancel = func() error {
 
-		return InterruptProcessTree(cmd, cmd.Process.Pid, syscall.SIGTERM)
+		return InterruptProcessTree(cmd, cmd.Process.Pid, syscall.SIGINT)
 	}
 	// wait after sending the interrupt signal, before sending the kill signal
 	cmd.WaitDelay = 100 * time.Second
@@ -74,7 +73,7 @@ func InterruptProcessTree(cmd *exec.Cmd, ppid int, sig syscall.Signal) error {
 
 	children = append(children, ppid)
 
-	sort.Slice(children, func(i, j int) bool { return children[i] > children[j] })
+	// sort.Slice(children, func(i, j int) bool { return children[i] > children[j] })
 
 	for _, pid := range children {
 		if cmd.ProcessState == nil {
@@ -84,6 +83,7 @@ func InterruptProcessTree(cmd *exec.Cmd, ppid int, sig syscall.Signal) error {
 			}
 			// time.Sleep(250 * time.Millisecond)
 		}
+		break
 	}
 
 	return nil
