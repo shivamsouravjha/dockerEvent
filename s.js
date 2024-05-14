@@ -28,15 +28,6 @@
         ]
     },
     {
-        "firstName": "Animesh",
-        "lastName": "Pathak",
-        "address": "HNO A -504 SECTOR-2 ANMOL APPTT",
-        "city": "NEW DELHI",
-        "telephone": "9958178959",
-        "id": 4,
-        "pets": []
-    },
-    {
         "firstName": "Charan",
         "lastName": "Kamarapu",
         "address": "HSR layout",
@@ -95,6 +86,15 @@
         "city": "New Delhi",
         "telephone": "9958178959",
         "id": 3,
+        "pets": []
+    },
+    {
+        "firstName": "Animesh",
+        "lastName": "Pathak",
+        "address": "HNO A -504 SECTOR-2 ANMOL APPTT",
+        "city": "NEW DELHI",
+        "telephone": "9958178959",
+        "id": 4,
         "pets": []
     }
 ]
